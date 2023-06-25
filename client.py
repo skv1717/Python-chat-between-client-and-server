@@ -8,7 +8,7 @@ def receive_messages(sock):
         message = ""
         try:
             while True:
-                mess = sock.recv(1).decode("utf-8")            # rec += sock.recv(1024)
+                mess = sock.recv(1).decode("utf-8")           
                 message += mess
                 if mess == '\n':
                     break
@@ -19,11 +19,11 @@ def receive_messages(sock):
             elif message.startswith("LIST-OK"):
                 _, users = message.split(" ", 1)
                 print(f"Online users: {users}")
-            elif "BAD-DEST-USER" in message:#BAD-DEST-USER\n
+            elif "BAD-DEST-USER" in message:
                 print(f"destination user is not currently logged in")
-            elif message.startswith("BAD-RQST-HDR"):#BAD-RQST-HDR\n
+            elif message.startswith("BAD-REQUEST-HDR"):
                 print(f"error in the header")
-            elif message.startswith("BAD-RQST-BODY"):#BAD-RQST-BODY\n
+            elif message.startswith("BAD-REQUEST-BODY"):
                 print(f"error in the body")
 
         except:
@@ -82,11 +82,11 @@ while True:
     
     response = ""
     while True:
-        mess = sock.recv(1).decode("utf-8")            # rec += sock.recv(1024)
+        mess = sock.recv(1).decode("utf-8")
         response += mess
         if mess == '\n':
             break
-    # print(response)
+
     if response.startswith("HELLO"):
         print(f"Logged in as {username}.")
         break
