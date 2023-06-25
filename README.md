@@ -10,12 +10,12 @@ The chat client allows users to connect to the chat server and exchange messages
 
 # Features
 
-1.Connects to the chat server and lets the user log in using a unique name.
-2.Asks for another name if the chosen name is already taken.
-3.Lets the user shutdown the client by typing !quit.
-4.Lets the user list all currently logged-in users by typing !who.
-5.Lets the user send messages to other users by typing @username message.
-6.Receives messages from other users and displays them to the user.
+<br / 1.Connects to the chat server and lets the user log in using a unique name.>
+<br / 2.Asks for another name if the chosen name is already taken.>
+<br / 3.Lets the user shutdown the client by typing !quit.>
+<br / 4.Lets the user list all currently logged-in users by typing !who.>
+<br / 5.Lets the user send messages to other users by typing @username message.>
+<br / 6.Receives messages from other users and displays them to the user.>
 
 # Usage
 
