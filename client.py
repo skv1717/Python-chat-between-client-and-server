@@ -12,7 +12,7 @@ def receive_messages(sock):
                 message += mess
                 if mess == '\n':
                     break
-            # print(message)
+           
             if message.startswith("DELIVERY"):
                 _, user, msg = message.split(" ", 2)
                 print(f"{user}: {msg}")
